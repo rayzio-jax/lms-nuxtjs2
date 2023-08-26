@@ -3,7 +3,7 @@
         <NavBar />
         <section
             class="h-[100vh] flex flex-col justify-center items-center text-2xl md:text-3xl lg:text-4xl dark:text-white">
-            <h1>About</h1>
+            <h1>Playground</h1>
         </section>
         <FooterBar />
     </main>
@@ -11,9 +11,9 @@
 
 <script>
 export default {
-    name: "AboutPage",
+    name: "PlaygroundPage",
     head: {
-        title: 'About',
+        title: 'Playground',
     },
 }
 </script>

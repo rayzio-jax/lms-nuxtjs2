@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+  @apply dark:bg-[#3b3b3b] bg-[#5bef87];
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
