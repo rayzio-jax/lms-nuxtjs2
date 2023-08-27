@@ -13,6 +13,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 .rubik-font {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;

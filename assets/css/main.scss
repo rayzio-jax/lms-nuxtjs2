@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
 html {
   @apply dark:bg-[#3b3b3b] bg-[#f0f0f0];
   height: 100%;
