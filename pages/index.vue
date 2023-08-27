@@ -7,7 +7,7 @@
       <div class="words-wrapper">
         <p>I'm a</p>
         <div class="words">
-          <span>UI Enthusiast</span>
+          <span>Front End Dev</span>
           <span>Junior Designer</span>
           <span>Junior Developer</span>
           <span>LoFi Listener</span>
@@ -43,7 +43,7 @@ export default {
     overflow: hidden;
 
     span {
-      padding: 10px 0 10px 10px;
+      padding: 10px 0 10px 20px;
       display: block;
       height: 100%;
       color: #0e6ffc;
