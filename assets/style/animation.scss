@@ -1,0 +1,52 @@
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+@keyframes spin_words_min {
+  10% {
+    transform: translateY(-120%);
+  }
+  25% {
+    transform: translateY(-115%);
+  }
+  35% {
+    transform: translateY(-220%);
+  }
+  50% {
+    transform: translateY(-215%);
+  }
+  60% {
+    transform: translateY(-320%);
+  }
+  75% {
+    transform: translateY(-315%);
+  }
+  85% {
+    transform: translateY(-420%);
+  }
+  100% {
+    transform: translateY(-415%);
+  }
+}
