@@ -1,0 +1,44 @@
+.words-wrapper {
+  box-sizing: content-box;
+  height: 100px;
+  padding: 30px 50px;
+  display: flex;
+
+  p {
+    padding: 10px 0;
+  }
+
+  .words {
+    padding: 30px 0;
+    overflow: hidden;
+
+    span {
+      @apply text-[30px] sm:text-[45px];
+      padding: 0 0 100px;
+      display: block;
+      height: 100%;
+      color: #0e6ffc;
+      animation: spin_words_min 6s infinite;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    @media screen and (min-width: 768px) {
+      span {
+        animation: spin_words 6s infinite;
+        padding: 10px 0 10px 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .words-wrapper {
+    height: 70px;
+    padding: 50px 30px;
+
+    .words {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
