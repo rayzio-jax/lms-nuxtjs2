@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.nuxt-link-active {
+  @apply text-inherit dark:text-inherit;
+}
+
+.nuxt-link-exact-active {
+  @apply text-white dark:text-green-400;
+}
+
+.rubik-font {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+nav {
+  box-shadow: 0 2px 15px rgba(47, 63, 47, 0.5);
+  transform: translate3d(0, 0, 0);
+  transition: 0.1s all ease-in-out;
+}
+
+nav.navbar-hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
+}
