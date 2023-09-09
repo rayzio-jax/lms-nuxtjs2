@@ -1,4 +1,10 @@
 export default {
+  publicRuntimeConfig: {
+    appName: 'AniBoks',
+    description: 'A website to bookmark your fav anime',
+    baseURL: process.env.BASE_URL
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     meta: [
@@ -7,13 +13,24 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
+    script: [
+      { src: 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', type: 'module' },
+      { src: 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', type: 'nomodule' }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // SCSS file in the project
-    '@/assets/css/main.scss'
+    '@/assets/style/main.scss',
+    '@/assets/style/animation.scss'
+  ],
+
+  js: [
+    '@aassets/js/main.js'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -39,14 +56,12 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
-  },
+  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
+      name: 'myApp',
       lang: 'en',
     },
   },
