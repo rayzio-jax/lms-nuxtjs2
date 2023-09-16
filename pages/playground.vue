@@ -125,9 +125,9 @@ export default {
     // daftar task
     return {
       newMovie: {
-        title: '',
-        desc: '',
-        genre: '',
+        title: 'Title',
+        desc: 'Sinopsis',
+        genre: 'None',
         isDone: false,
       },
       selectedQuery: '',
