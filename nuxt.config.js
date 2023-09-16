@@ -83,6 +83,5 @@ export default {
     // Add your repo name /<-repository-name->/
     base: '/lms-nuxtjs2/',
     routerNameSplitter: '/',
-
   },
 }
