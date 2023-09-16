@@ -23,6 +23,7 @@
             class="@select @select-success p-2 m-0 w-full max-w-xs"
           >
             <option disabled value="">Sekect movie genre</option>
+            <option>None</option>
             <option>Comedy</option>
             <option>Action</option>
             <option>Superhero</option>
@@ -58,26 +59,45 @@
       </div>
     </div>
     <!-- add movie form container -->
-    <form v-else class="py-2 px-4">
+    <form v-else class="py-2 px-4" @submit.prevent="addMovie">
       <!-- add movie form -->
       <div id="movie-form">
-        <div id="add-card" class="flex flex-col">
+        <div id="add-card" class="flex flex-col gap-y-6">
           <input
+            id="movie-title"
+            v-model="newMovie.title"
             type="text"
             placeholder="Title"
             class="border border-black mb-2 p-2 text-base md:text-lg"
+            required
+          />
+          <input
+            id="movie-genre"
+            v-model="newMovie.genre"
+            type="text"
+            placeholder="Enter movie genre separate by space"
+            class="border border-black mb-2 p-2 text-base md:text-lg"
+            required
           />
           <textarea
+            id="movie-synopsis"
+            v-model="newMovie.desc"
             cols="30"
             rows="10"
             class="text-lg p-2 border border-slate-500"
+            placeholder="Sinopsis"
+            required
           ></textarea>
+          <div class="flex gap-x-3">
+            <label for="movie-done">Done watch?</label>
+            <input id="movie-done" v-model="newMovie.isDone" type="checkbox" />
+          </div>
         </div>
         <div id="confirmation-btn" class="py-2 flex gap-x-3">
           <button
             id="save-btn"
+            type="submit"
             class="@btn @btn-primary font-bold text-base text-white md:text-lg"
-            @click="prevent"
           >
             Save
           </button>
@@ -104,6 +124,12 @@ export default {
   data() {
     // daftar task
     return {
+      newMovie: {
+        title: '',
+        desc: '',
+        genre: '',
+        isDone: false,
+      },
       selectedQuery: '',
       isMobile: false,
       isMultiGrid: false,
@@ -190,23 +216,27 @@ export default {
       ],
     }
   },
+
   head: {
     title: 'Playground',
   },
+
   computed: {
     resultQuery() {
-      if (this.selectedQuery) {
+      if (this.selectedQuery.toLowerCase() === 'none') {
+        return this.movies
+      } else if (this.selectedQuery) {
         return this.movies.filter((movie) => {
           return this.selectedQuery
             .toLowerCase()
             .split(' ')
             .every((item) => movie.genre.toLowerCase().includes(item))
         })
-      } else {
-        return this.movies
       }
+      return this.movies
     },
   },
+
   mounted() {
     let screenWidth = window.innerWidth
     if (screenWidth < 768) {
@@ -217,7 +247,19 @@ export default {
       this.isMobile = false
     }
   },
-  methods: {},
+  methods: {
+    addMovie() {
+      this.movies.push({ ...this.newMovie })
+
+      this.newMovie = {
+        title: '',
+        desc: '',
+        genre: '',
+        isDone: false,
+      }
+      console.log(this.movies)
+    },
+  },
 }
 </script>
 
