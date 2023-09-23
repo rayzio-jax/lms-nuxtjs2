@@ -8,7 +8,8 @@
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
       <NuxtLink to="/contact">Contact</NuxtLink>
-      <NuxtLink to="/playground">Playground</NuxtLink>
+      <NuxtLink to="/movie">Movies</NuxtLink>
+      <NuxtLink to="/articles">Articles</NuxtLink>
     </div>
     <div class="relative flex-grow flex items-center justify-end">
       <ion-icon name="sunny"></ion-icon>

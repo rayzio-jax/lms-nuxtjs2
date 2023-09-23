@@ -11,17 +11,14 @@
 export default {
   name: 'IndexPage',
   data() {
-    return {
-      msg: 'lorem20',
-    }
+    return {}
   },
 
   head() {
     return {
-      title: `Home | ${this.$config.appName}`,
+      title: 'Home',
     }
   },
-  mounted() {},
 }
 </script>
 

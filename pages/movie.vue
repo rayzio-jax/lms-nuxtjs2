@@ -50,10 +50,10 @@
         ]"
       >
         <!-- movie list -->
-        <CardItem
-          v-for="(item, i) in resultQuery"
+        <card-item
+          v-for="(movie, i) in resultQuery"
           :key="i"
-          :movie="item"
+          :item="movie"
           :is-multi-grid="isMultiGrid"
         />
       </div>
@@ -117,7 +117,7 @@
 <script>
 import CardItem from '~/components/CardItem.vue'
 export default {
-  name: 'PlaygroundPage',
+  name: 'MoviesPage',
   components: {
     CardItem,
   },
